@@ -76,6 +76,7 @@ map.forEach((a,id)=>{const s=document.getElementById(id);if(s)io.observe(s)});}
 const t=document.querySelector('.toc');const mq=matchMedia('(max-width: 900px)');const fit=()=>{if(mq.matches)t.removeAttribute('open');else t.setAttribute('open','')};fit();mq.addEventListener('change',fit);
 links.forEach(a=>a.addEventListener('click',()=>{if(mq.matches)t.removeAttribute('open')}));})();
 </script>
+<script>document.querySelectorAll("a.brand").forEach(a=>a.addEventListener("click",e=>{if(window.imIntro){e.preventDefault();history.replaceState(null,"",location.pathname);window.imIntro()}else{try{sessionStorage.setItem("im-intro-force","1")}catch(_){}}}));</script>
 <div class="proof-bar" style="position:fixed;right:0;bottom:0;z-index:9999;background:#0E2A4F;color:#fff;font:12px/1 'Inter Tight',sans-serif;padding:9px 12px;display:flex;gap:14px"><span>Proof · Proposal B · Light green and fuchsia</span><a style="color:#fff" href="../../A/index.html">See proposal A</a></div>
 </body>
 </html>
